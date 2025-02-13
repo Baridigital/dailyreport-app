@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showData()">View Table Summary</a>
+        <a href="#" onclick="showSummary()">View Text Summary</a>
+        <button onclick="generateDailyReport()">Generate Daily Report</button>          
+    </div>
+    
+    <div id="dataSection" class="container">
+        <h2>Submitted Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Operator</th>
+                    <th>Date</th>
+                    <th>Equipment Tag</th>
+                    <th>Location</th>
+                    <th>Starting Hours</th>
+                    <th>Ending Hours</th>
+                    <th>Starting Fuel Level(%)</th>
+                    <th>Ending Fuel Level(%)</th>
+                    <th>Quantity of Fuel Added(Ltrs)</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+        <button onclick="deleteSelected()">Delete Selected Entries</button>
+    </div>
+    
+    <div id="summary" class="container">
+        <h2>Text Summary</h2>
+        <div id="summaryContent"></div>
+    </div>
+
+    <div id="dailyReport" class="container">
+        <h2 id="reportHeading"></h2>
+        <div id="dailyReportContent"></div>
+        <button class="copy-btn" onclick="copyReport()">Copy Report</button>
+    </div>
+
+    <script src="./script2.js"></script>
+</body>
+</html>
